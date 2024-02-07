@@ -6,14 +6,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.Pom.pack.UserMasterPom;
+import com.PomForAdmin.UserMasterPom;
 
 import TestBase.Base;
 import Utilitys.XLUtils1;
 
 public class UserMasterTest extends Base {
 	 XLUtils1 reader = new XLUtils1();
-	    String sheetPath ="C:\\\\Users\\\\HP\\\\Documents\\\\Admin Modul Test DATA.xlsx";
+	    String sheetPath ="C:\\Users\\HP\\eclipse-workspace\\Admin Modul Test DATA.xlsx";
 	    String sheetName ="UserMasterTest";
 	    int rowCount;
 	    int colCount;

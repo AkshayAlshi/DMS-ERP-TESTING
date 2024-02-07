@@ -1,5 +1,7 @@
 package com.PomForStore;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +20,9 @@ public class StockAdjustmentPom extends Base {
 	WebElement SelectStockLocation;
 	
 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[7]")
+	WebElement DropResvers;
+	
+	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[8]")
 	WebElement ItemDrop;
 	
 	
@@ -35,29 +40,62 @@ public class StockAdjustmentPom extends Base {
 	
 	
 	
-	public void StockAdjustmentPom(WebDriver Driver ) {
+	public StockAdjustmentPom(WebDriver Driver ) {
 		
 		PageFactory.initElements( Driver, this );
 	}
 	
 	public void SelectStockLocation() throws InterruptedException {
 		
-		StockLocationDrop.click();
+//		StockLocationDrop.click();
+		
+		
+		WebElement ele = driver.findElement(By.xpath("(//igx-icon[@class='material-icons igx-icon'])[6]"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", ele);
 		
 		Thread.sleep(500);
 		
-		SelectStockLocation.click();
+		
+		WebElement ele1 = driver.findElement(By.xpath("//span[text()=' Main Store ']"));
+        JavascriptExecutor executor1 = (JavascriptExecutor)driver;
+        executor1.executeScript("arguments[0].click();", ele1);
+//		SelectStockLocation.click();
+        
+        DropResvers.click();
 	}
 	
 	
 	
 	public void SelectItem() throws InterruptedException {
-		ItemDrop.click();
 		
+		
+		try {
+			
+			ItemDrop.click();
+			
+		} catch (Exception e) {
+			
+			WebElement ele = driver.findElement(By.xpath("(//igx-icon[@class='material-icons igx-icon'])[8]"));
+	        JavascriptExecutor executor = (JavascriptExecutor)driver;
+	        executor.executeScript("arguments[0].click();", ele);
+		}
 		Thread.sleep(500);
 		
 		
-		SelectItem.click();
+		
+		
+		
+		try {
+			SelectItem.click();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			WebElement ele = driver.findElement(By.xpath("//span[text()=' 9755 - ITEM3 ']"));
+	        JavascriptExecutor executor = (JavascriptExecutor)driver;
+	        executor.executeScript("arguments[0].click();", ele);
+	        
+		}
 		
 	}
 	
@@ -66,11 +104,14 @@ public class StockAdjustmentPom extends Base {
 	public void ClickOnSaveButton() {
 		SaveButton.click();
 		
+		
 	}
+	
 	
 	
 	public void ClickOnSubmitButton() {
 		ClickOnSubmitButton.click();
+		
 	}
 	
 }

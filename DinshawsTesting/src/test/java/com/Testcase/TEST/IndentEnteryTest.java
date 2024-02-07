@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.Pom.pack.IndentEnteryPom;
-import com.Pom.pack.UserMasterPom;
+import com.PomForAdmin.UserMasterPom;
 
 import TestBase.Base;
 import Utilitys.XLUtils1;

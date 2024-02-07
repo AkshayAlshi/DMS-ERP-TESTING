@@ -6,7 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.Pom.pack.PartyMasterPom;
+
 import com.PomForAdmin.EntityPom;
 
 import TestBase.TBase;
@@ -16,7 +16,7 @@ public class EntityTest  extends TBase {
 	
 	
 	 XLUtils1 reader = new XLUtils1();
-	    String sheetPath ="C:\\Users\\HP\\Documents\\Admin Modul Test DATA.xlsx";
+	    String sheetPath ="C:\\Users\\\\HP\\eclipse-workspace\\Admin Modul Test DATA.xlsx";
 	    String sheetName ="EntityTest";
 	    int rowCount;
 	    int colCount;
@@ -69,6 +69,7 @@ public class EntityTest  extends TBase {
             
 				EntityPom EP=new EntityPom(driver);
 				
+				EP.ClickOnCreateButton();
 				EP.EnterEntityName(Name);
 				EP.SelectCurrency();
 				EP.SelectType();

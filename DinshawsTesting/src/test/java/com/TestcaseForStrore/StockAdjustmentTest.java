@@ -25,7 +25,7 @@ public class StockAdjustmentTest   extends Base  {
 	      
 	    			
 
-	    	StockAdjustmentPom SA = new StockAdjustmentPom();
+	    	StockAdjustmentPom SA = new StockAdjustmentPom(driver);
 	    			
 	    			
 	    			SA.SelectStockLocation();

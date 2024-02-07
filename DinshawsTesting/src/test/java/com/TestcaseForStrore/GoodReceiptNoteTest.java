@@ -6,8 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.PomForStrore.GateEntryPom;
-import com.PomForStrore.GoodReceiptNotePom;
+import com.PomForStore.GoodReceiptNotePom;
 
 import TestBase.Base;
 import Utilitys.XLUtils1;
@@ -33,6 +32,7 @@ public class GoodReceiptNoteTest extends Base{
         selectModuleNameForAdminWithForm(prop.getProperty("ModlueXpath-GoodReceiptNoteTest"), prop.getProperty("SubModuleXapath-GoodReceiptNoteTest"), prop.getProperty("FormNameXpath-GoodReceiptNoteTest"));
     }
 
+    
     @Test
     public void VerifyGoodReceiptNoteForm() throws InterruptedException, IOException {
         try {
@@ -127,6 +127,7 @@ public class GoodReceiptNoteTest extends Base{
     			
     			
     			
+    			
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -137,6 +138,7 @@ public class GoodReceiptNoteTest extends Base{
     @AfterTest
     public void tearDown() {
 //        driver.quit();
+    	
     }
 
 }

@@ -27,7 +27,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 
-import com.Arihant.QA.util.Arihant_util;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -368,7 +367,7 @@ public static  void afterMethod(ITestResult result, String ClassName) throws IOE
     if (result.getStatus() == ITestResult.FAILURE) {
         extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS " + result.getName());
         extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS " + result.getThrowable());
-        String screenshotPath = Arihant_util.getScreenshot1(driver, result.getName());
+        String screenshotPath = Util.getScreenshot1(driver, result.getName());
         extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));
     } else if (result.getStatus() == ITestResult.SKIP) {
         extentTest.log(LogStatus.SKIP, "Test Case SKIPPED IS " + result.getName());

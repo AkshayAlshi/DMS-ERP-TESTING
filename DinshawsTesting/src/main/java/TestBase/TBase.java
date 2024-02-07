@@ -22,7 +22,7 @@ public class TBase {
 	public static Properties prop;
 	public  static EventFiringWebDriver e_driver;
 	public static WebDriverEventListener eventListener;
-	
+//	public static  ChromeOptions options;
 	
 	
 	
@@ -45,9 +45,12 @@ public class TBase {
 		String browserName=prop.getProperty("browser");
 		
 	    	if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\HP\\eclipse-workspace\\Hospy_IND_VersionQA\\WebDrivers\\chromedriver-win64119\\chromedriver.exe");	
-			 ChromeOptions options = new ChromeOptions();
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\HP\\git\\DMS-ERP-TESTING\\DinshawsTesting\\Drivers\\chromedriver-win64\\chromedriver.exe");	
+			
+			ChromeOptions options = new ChromeOptions();
+			options.setAcceptInsecureCerts(true);    //For Unsecure Site 
 		       driver = new ChromeDriver(options);
+			
 		       driver.manage().timeouts().implicitlyWait(Util.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		       
 		}

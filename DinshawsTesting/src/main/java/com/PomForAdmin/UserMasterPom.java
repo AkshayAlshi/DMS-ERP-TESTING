@@ -1,4 +1,4 @@
-package com.Pom.pack;
+package com.PomForAdmin;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +12,8 @@ public class UserMasterPom extends Base{
 	
 	@FindBy(xpath="((//span[@class='add-button-icon material-symbols-outlined fs-17'])[2 and text()='add'])[2]")
 	WebElement AddButton;
+	
+	
 	
 	@FindBy(xpath="(//input[@class='is-invalid ng-untouched ng-pristine igx-input-group__input ng-invalid'])[1]")
 	WebElement LoginID;

@@ -33,7 +33,7 @@ import Utilitys.Util;
 		public Base(){
 			try {
 				prop = new Properties();
-				FileInputStream ip = new FileInputStream("C:\\Users\\HP\\git\\MPSSPL-ERP-TESTING\\DinshawsTesting\\Dinshaws.Properties");
+				FileInputStream ip = new FileInputStream("C:\\Users\\HP\\git\\DMS-ERP-TESTING\\DinshawsTesting\\Dinshaws.Properties");
 				prop.load(ip);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -47,7 +47,7 @@ import Utilitys.Util;
 			String browserName=prop.getProperty("browser");
 			
 		    	if(browserName.equals("chrome")){
-				System.setProperty("webdriver.chrome.driver","C:\\Users\\HP\\git\\MPSSPL-ERP-TESTING\\DinshawsTesting\\Drivers\\chromedriver-win64\\chromedriver.exe");	
+				System.setProperty("webdriver.chrome.driver","C:\\Users\\HP\\git\\DMS-ERP-TESTING\\DinshawsTesting\\Drivers\\chromedriver-win64\\chromedriver.exe");	
 				 ChromeOptions options = new ChromeOptions();
 			       driver = new ChromeDriver(options);
 			       driver.manage().timeouts().implicitlyWait(Util.IMPLICIT_WAIT, TimeUnit.SECONDS);

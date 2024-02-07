@@ -12,10 +12,10 @@ import com.PomForAdmin.RolesAndPermissionsPOM;
 import TestBase.TBase;
 import Utilitys.XLUtils1;
 
-public class RolesAndPermissionsTest extends TBase {
+public class  RolesAndPermissionsTest  extends TBase {
 	
 	 XLUtils1 reader = new XLUtils1();
-	    String sheetPath ="C:\\Users\\HP\\Documents\\Admin Modul Test DATA.xlsx";
+	    String sheetPath ="C:\\Users\\HP\\eclipse-workspace\\Admin Modul Test DATA.xlsx";
 	    String sheetName ="RolesAndPermissionsTest";
 	    int rowCount;
 	    int colCount;
@@ -38,7 +38,7 @@ public class RolesAndPermissionsTest extends TBase {
 	
 	
 	@Test
-	public void VerifyEntityMasterForm() throws Exception {
+	public void VerifyRolesAndPermissionsForm() throws Exception {
 		
 		try {
 			
@@ -64,9 +64,10 @@ public class RolesAndPermissionsTest extends TBase {
 
 				RAP.EnterRoleName(RoleName);
 				RAP.SelectDepartment();
+				RAP.isSystemCheck();
 				RAP.ClickOnViewCheck();
 				RAP.ClickOnNewCheck();
-				RAP.ClickOnConfigurationViewCheck();
+				RAP.ClickOnEditCheckBox();
 				RAP.ClickOnSubmitButton();
 				
 				
