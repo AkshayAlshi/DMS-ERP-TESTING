@@ -31,7 +31,7 @@ import Utilitys.Util;
 		public static WebDriverEventListener eventListener;
 		
 		public Base(){
-			try {
+		 try {
 				prop = new Properties();
 				FileInputStream ip = new FileInputStream("C:\\Users\\HP\\git\\DMS-ERP-TESTING\\DinshawsTesting\\Dinshaws.Properties");
 				prop.load(ip);

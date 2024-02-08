@@ -1,14 +1,23 @@
 package com.PomForAccountsVoucher;
 
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import TestBase.Base;
 
-public class BankPaymentPom  extends Base {
 
+
+import TestBase.TBase;
+
+
+public class BankPaymentPom  extends TBase {
+
+	
+	
 	
 	
 	@FindBy(xpath="((//span[@class='add-button-icon material-symbols-outlined fs-17'])[2 and text()='add'])[2]")
@@ -24,12 +33,12 @@ public class BankPaymentPom  extends Base {
 	
 	
 	
-	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[10]")
+	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[11]")
 	WebElement AccountDrop;
 	
 	
 	
-	@FindBy(xpath="//span[text()=' 11001100 ']")
+	@FindBy(xpath="//span[text()=' 2023 ']")
 	WebElement SelectAccount;
 	
 	
@@ -45,7 +54,7 @@ public class BankPaymentPom  extends Base {
 	
 	
 	
-	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[14]")
+	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[15]")
 	WebElement TXNCodeDrop;
 	
 	
@@ -56,6 +65,9 @@ public class BankPaymentPom  extends Base {
 	
 	
 	
+	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[16]")
+	WebElement CrossPaymenticon;
+	
 	
 	
 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[17]")
@@ -64,7 +76,7 @@ public class BankPaymentPom  extends Base {
 	
 	
 	
-	@FindBy(xpath="//span[text()=' Cheque ']")
+	@FindBy(xpath="//span[text()=' RTGS ']")
 	WebElement SelectPaymenetMode;
 	
 	
@@ -72,7 +84,7 @@ public class BankPaymentPom  extends Base {
 	
 	
 	@FindBy(xpath="(//input[@type='number'])[4]")
-	WebElement EnterChequeNo;
+	WebElement EnterChequeNo ;
 	
 	
 	
@@ -83,14 +95,14 @@ public class BankPaymentPom  extends Base {
 	
 	
 	
-	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[22]")
+	@FindBy(xpath="(//input[@role='combobox'])[13]")
 	WebElement DebitToAccountDrop;
 	
 	
 	
 	
 	@FindBy(xpath="//span[text()=' 1274 ']")
-	WebElement SelectDebityAccount;;
+	WebElement SelectDebityAccount;
 	
 	
 	
@@ -104,6 +116,137 @@ public class BankPaymentPom  extends Base {
 	public BankPaymentPom  (WebDriver Driver) {
 		PageFactory.initElements(Driver,this);
 	}
+	
+	
+	
+	public void ClickOnCreateButton() {
+		CreateButton.click();
+	}
+	
+	
+	
+	public  void SelectSeries() throws InterruptedException {
+		SeriesDrop.click();
+		
+		Thread.sleep(500);
+		
+		SelectSeries.click();
+		
+	}
+	
+	
+	
+	
+	
+	public void SelectAccount() throws InterruptedException {
+		AccountDrop.click();
+		
+		
+		
+		
+		Thread.sleep(500);
+		
+		
+		
+		SelectAccount.click();
+	}
+	
+	
+	
+	public void EnterVoucherAmount(String voucheramount) {
+		EnterVoucherAmount.sendKeys(voucheramount);
+		
+		
+	}
+	
+	
+	public void EnterNaration(String naration) {
+		EnterNaration.sendKeys(naration);
+	}
+	
+	
+	public void SelctTXNCode() throws InterruptedException {
+		TXNCodeDrop.click();
+		
+		Thread.sleep(500);
+		
+		
+		SelectTxnCode.click();
+		
+	}
+	
+	
+	
+	public void SelectPaymentMode() throws InterruptedException {
+		
+		
+		
+	
+		Thread.sleep(500);
+		PaymentModeDrop.click();
+		
+		
+		
+		Thread.sleep(500);
+		
+		SelectPaymenetMode.click();
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	public void EnterChequeNo(String chequeno) {
+		
+		EnterChequeNo.sendKeys(chequeno);
+		
+		
+	}
+	
+	
+	
+	public void EnterChequeDate(String chequedate) throws InterruptedException {
+		
+		EnterChequeDate.click();
+		
+		Thread.sleep(500);
+		
+		EnterChequeDate.sendKeys(chequedate);
+		
+	}
+	
+	
+	public void SelectDebitToAccount() throws InterruptedException {
+//		DebitToAccountDrop.click();
+		
+		
+		
+		WebElement ele = driver.findElement(By.xpath("(//igx-icon[@class='material-icons igx-icon'])[22]"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", ele);
+		
+		Thread.sleep(500);
+		
+		SelectDebityAccount.click();
+	}
+	
+	
+	
+	
+	
+	public void ClickOnSubmitButton() {
+		
+		ClickOnSubmitButton.click();
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 	

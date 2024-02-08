@@ -48,7 +48,7 @@ public class TBase {
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\HP\\git\\DMS-ERP-TESTING\\DinshawsTesting\\Drivers\\chromedriver-win64\\chromedriver.exe");	
 			
 			ChromeOptions options = new ChromeOptions();
-			options.setAcceptInsecureCerts(true);    //For Unsecure Site 
+			options.setAcceptInsecureCerts(true);                //For Unsecure Site 
 		       driver = new ChromeDriver(options);
 			
 		       driver.manage().timeouts().implicitlyWait(Util.IMPLICIT_WAIT, TimeUnit.SECONDS);
