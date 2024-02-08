@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestForAccount_Masters.InventoryCodeMappingTest">
+      <class name="com.TestForAccountVouches.CashRecieptTest">
         <methods>
-          <include name="VerifyInventoryCodeMappingForm"/>
-          <include name="tearDown"/>
           <include name="setup"/>
+          <include name="VerifyBankPaymentTestForm"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.TestForAccount_Masters.InventoryCodeMappingTest -->
+      </class> <!-- com.TestForAccountVouches.CashRecieptTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
