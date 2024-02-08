@@ -11,9 +11,6 @@ import TestBase.TBase;
 
  public class InventoryCodeMappingPom  extends TBase {
 
-	
-	 
-	 
 	 
 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[3]")
 	WebElement ClickOnAccountDrop1;
@@ -276,6 +273,7 @@ import TestBase.TBase;
 		
 		
 		SelectAccount11.click();
+		
 		
 	}
 	
