@@ -6,7 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.PomForStore.GoodReceiptNotePom;
+
 
 import TestBase.Base;
 import Utilitys.XLUtils1;
@@ -59,7 +59,7 @@ public class GoodReceiptNoteTest extends Base{
      			String ChargeAmount = reader.getCellData(sheetPath, sheetName, rowNum, colNum+14);
     			
      			
-    			GoodReceiptNotePom GRN = new GoodReceiptNotePom(driver);
+     			GoodReceiptNotePom GRN = new GoodReceiptNotePom(driver);
     			
     			
     			GRN.clickonaddbutton1();

@@ -17,15 +17,17 @@ public class IndentEnteryPom  extends  Base {
 	WebElement CreateButton;
 	
 	
+	
  	@FindBy(xpath="(//igx-suffix[@class='igx-select__toggle-button'])[5]")
  	WebElement MaterialTypeDrop;
+ 	
  	
  	
  	@FindBy(xpath="//igx-select-item//span[text()=' Services ']")
  	WebElement  SelectMaterialType;
 
 	
- 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[10]")
+ 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[11]")
  	WebElement IndentTypeDrop;
  	
  	
@@ -33,7 +35,7 @@ public class IndentEnteryPom  extends  Base {
  	WebElement SelecetIndentType;
  	
  	
- 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[17]")
+ 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[18]")
  	WebElement CurrencyDrop;
 
 	
@@ -42,7 +44,7 @@ public class IndentEnteryPom  extends  Base {
  	
  	
  	
- 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[19]")
+ 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[20]")
  	WebElement TermsAndConditionDrop;
  	
  	
@@ -50,7 +52,7 @@ public class IndentEnteryPom  extends  Base {
  	WebElement SelectTermsAndConditionDrop;
 
 	
- 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[21]")
+ 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[22]")
  	WebElement ItemDrop;
  	
  	
@@ -60,7 +62,7 @@ public class IndentEnteryPom  extends  Base {
  	WebElement SelectItem;
  	
  	
- 	@FindBy(xpath="(//input[@type='text'])[13]")
+ 	@FindBy(xpath="(//input[@type='text'])[11]")
  	WebElement EnterSpecification;
 
 	
@@ -78,7 +80,7 @@ public class IndentEnteryPom  extends  Base {
  	WebElement RequiredByDate;
 
 	
- 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[26]")
+ 	@FindBy(xpath="/html/body/app-root/div/app-wrapper-inv/app-templete-wrapper/div[1]/div/div/app-component-wrapper/div/app-indh-inv-create/app-g-table/app-g-table-row[3]/div/app-indent-details/app-g-table/app-g-table-row[1]/div/app-g-form/div/div/app-g-form-row[2]/div/app-g-combo-all-combobox/div/igx-combo/igx-input-group/div[1]/div/div[5]/igx-suffix/igx-icon")
  	WebElement PreferredVendorDrop;
  	
  	
@@ -88,7 +90,7 @@ public class IndentEnteryPom  extends  Base {
  	WebElement SelectPreferredVendor;
  	
  	
- 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[27]")
+ 	@FindBy(xpath="(//igx-icon[@class='material-icons igx-icon'])[28]")
  	WebElement SelectPrefrredVendorReversal;
 
 	
@@ -141,7 +143,7 @@ public class IndentEnteryPom  extends  Base {
  	public void SelectMaterialTypeDrop() throws InterruptedException {
 // 		MaterialTypeDrop.click();
  		
- 		WebElement ele = driver.findElement(By.xpath("(//igx-suffix[@class='igx-select__toggle-button'])[5]"));
+ 		WebElement ele = driver.findElement(By.xpath("(//igx-suffix[@class='igx-select__toggle-button'])[4]"));
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", ele);
 //        ele.click();
@@ -198,7 +200,7 @@ public class IndentEnteryPom  extends  Base {
  	
  	public void  SelectItemDrop() throws InterruptedException {
  		
- 		ItemDrop.click();
+// 		ItemDrop.click();
  		
  		
  		

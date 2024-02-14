@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestForAccountVouches.CashRecieptTest">
+      <class name="TestForPurchase.IndentEnteryTest">
         <methods>
-          <include name="setup"/>
-          <include name="VerifyBankPaymentTestForm"/>
           <include name="tearDown"/>
+          <include name="VerifyIndentEnteryForm"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.TestForAccountVouches.CashRecieptTest -->
+      </class> <!-- TestForPurchase.IndentEnteryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

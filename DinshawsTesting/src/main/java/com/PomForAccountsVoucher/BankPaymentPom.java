@@ -121,6 +121,8 @@ public class BankPaymentPom  extends TBase {
 	
 	public void ClickOnCreateButton() {
 		CreateButton.click();
+		
+		
 	}
 	
 	
